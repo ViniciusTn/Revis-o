@@ -13,3 +13,22 @@ console.log(`O total da soma é: ${total}`);
 
 
 
+//2. Contagem Regressiva da NASA  
+//Simule uma contagem regressiva para o lançamento de um foguete, partindo de 10 até 0, e ao final exiba a mensagem "Lançamento!".  
+//Dica: estude a função `setInterval()` do JavaScript.
+
+function contagemRegressiva(){
+    let intervalo = setInterval(contagem, 1000);
+    let regressiva = 10
+    function contagem(){
+        if(regressiva > 1){
+        console.log(regressiva);
+        regressiva--;            
+        }else{
+              console.log('lançamento');
+            clearInterval(intervalo);
+
+        }
+    }
+}
+contagemRegressiva();
