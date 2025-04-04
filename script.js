@@ -32,3 +32,32 @@ function contagemRegressiva(){
     }
 }
 contagemRegressiva();
+
+
+//3. Balanço Financeiro Anual  
+//Crie um algoritmo que solicite o ganho bruto e os gastos mensais de uma empresa durante os 12 meses do ano. Ao final, exiba:  
+//- Total de ganhos  
+//- Total de gastos  
+//- Saldo final  
+//- E uma mensagem informando se a empresa teve lucro ou prejuízo no ano
+
+let ganhoBruto = prompt('qual foi o gaho bruto da empresa')
+let gastosMensais = prompt('quais foram os gastos mensais da empresa')
+
+function balancoFinanceiro (ganhoBruto, gastosMensais){
+    let totalGanho = (ganhoBruto *  12);
+    let totalGasto = (gastosMensais * 12);
+    let saldoFinal = (totalGanho - totalGasto);
+
+    if(totalGasto >= saldoFinal){
+        console.log(' o saldo final é ' + saldoFinal);
+        console.log(' a empresa teve prejuiso no final do ano');
+ }
+
+     else{
+        console.log(' o saldo final é ' + saldoFinal);
+        console.log(' a empresa teve lucro no final do ano');
+ }
+     }
+
+     balancoFinanceiro(ganhoBruto,gastosMensais)
